@@ -1,0 +1,84 @@
+main {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+}
+
+.mode-container {
+    font-family: Georgia;
+    background-color: rgb(250, 246, 246);
+    padding: 10px;
+    border-radius: 10px;
+    border-style:groove;
+    border-width: 5px;
+}
+
+.select-mode {
+    padding: 10px; /* Jarak di dalam select */
+    width: 34%;
+    border: 1px solid #060606; /* Ukuran dan warna border */
+    border-radius: 5px;
+}
+
+.container-nilai {
+    font-family: Georgia;
+    background-color: rgb(250, 246, 248);
+    padding: 20px;
+    padding-bottom: 50px;
+    padding-right: 0%;
+    border-radius: 10px;
+    border-style: groove;
+    border-width: 5px;
+    width: 400px;
+    margin-top: 10px;
+}
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+option {
+    width: 20px;
+}
+input, select {
+    width: 77%;
+    padding: 10px;
+    border: 1px solid #0f0f0f;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.button-kirim button {
+    background-color: #4CAF50;
+    color: rgb(249, 246, 246);
+    font-size: medium;
+    font-weight: bolder;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 10%;
+    position: absolute;
+    left: 10%;
+}
+.button-kirim button:hover {
+    background-color: #45a049;
+}
+.logout-button {
+    background-color: #f44336; /* Warna merah untuk tombol logout */
+    color: rgb(249, 246, 246);
+    padding:10px; /* Padding lebih kecil untuk tombol logout */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    width: auto;
+    position:absolute; /* Posisi absolut untuk menempatkan di pojok kanan atas */
+    top: 20px;
+    right: 20px;
+    font-size: 14px; /* Ukuran font lebih kecil */
+}
+.logout-button:hover {
+    background-color: #ccc;
+}
