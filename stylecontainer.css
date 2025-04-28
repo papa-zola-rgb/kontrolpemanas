@@ -1,78 +1,157 @@
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
 body {
-    font-family:Georgia;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    min-height: 100vh;
+    height: 100vh;
+    background: linear-gradient(8deg, #bcd1f0, #165acf);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
 }
 
-img {
-    width: 100%; /* Make the image responsive */
-    max-width: 360px; /* Limit the width to match the container */
-    height:auto;
-    margin: 15px;
-}
-
-.container {
-    max-width: 400px;
-    width: 70%; /* Full width of the parent */
-    margin: 15px;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 30px; /* Rounded corners */
-    margin-bottom: auto;
-}
-
-h1 {
+.caution {
     text-align: center;
-    margin-bottom: 30px;
+    position: absolute;
+    right: 25%;
+    margin-top: 1%;
+    color: #f40a0a;
+    font-weight: bolder;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+.caution1 {
+    display: block;
+    position: absolute;
+    top: 6%;
+    right: 17%;
+    text-align: center;
+}
+
+.mode-container {
+    justify-content: space-between;
+    display: flex;
+    padding: 10px;
+    width: 40%;
+    margin: 15px;
+    border-radius: 10px;
+    border-style: groove;
+    border-width: 5px;
+    position: absolute;
+    text-align: center;
+}
+
+input,
+timpesampling {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #0f0f0f;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+select {
+    width: 220px;
+    padding: 10px;
+    border: 1px solid #0f0f0f;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 label {
-    display: block;
-    margin-bottom: 10px;
     font-weight: bold;
+    display: block;
 }
 
-input, select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-bottom: 20px;
+.input-group {
+    width: 200px;
+    padding: 20px;
+    margin-bottom: 0;
+    /* Jarak antar input */
+    position: relative;
+    top: 20%;
+    left: 3%;
+}
+
+input,
+.input-group {
+    margin-bottom: 2px;
+}
+
+label,
+.input-group {
+    font-style: normal;
+}
+
+.button-bawah {
+    position: absolute;
+    bottom: 11%;
+    left: 5%;
+    border-style: hidden;
 }
 
 button {
-    background-color: #27ac2b;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    display: block;
-    margin: 0 auto;
+    background-color: rgb(11, 230, 48);
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: darkgreen;
 }
 
-footer {
-    color: #f9f6f6;
-    font-family: Gill Sans;
-    width: 99.7%;
-    padding-bottom: 5px;
-    position:fixed bottom;
-    text-align: center;
-}
-.vid_back {
+.csv {
     position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1; /* Di belakang konten lainnya */
+    bottom: 5%;
+    left: 4.5%;
+    border-style: double;
+}
+
+.logout-button {
+    background-color: #f44336;
+    /* Warna merah untuk tombol logout */
+    color: rgb(249, 246, 246);
+    padding: 10px;
+    /* Padding lebih kecil untuk tombol logout */
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    cursor: pointer;
+    width: auto;
+    position: absolute;
+    /* Posisi absolut untuk menempatkan di pojok kanan atas */
+    top: 8px;
+    right: 20px;
+    font-size: 14px;
+    /* Ukuran font lebih kecil */
+}
+
+.logout-button:hover {
+    background-color: #ccc;
+}
+
+canvas {
+    width: 100% !important;
+    /* Memastikan canvas memenuhi lebar kontainer */
+    height: 100% !important;
+    /* Tinggi otomatis untuk menjaga aspek rasio */
+}
+
+.chart-container {
+    position: fixed;
+    left: 260px;
+    bottom: 20px;
+    height: 400px;
+    /* Tinggi untuk kontainer grafik */
+    width: 970px;
+    margin-bottom: 0px;
+    /* Jarak antara grafik */
+    background: white;
+    /* Warna latar belakang untuk grafik */
+    border: #0f0f0f;
+    border-radius: 5px;
+    box-shadow: 9px 2px 9px 8px rgba(0, 0, 0, 0.51);
+    -webkit-box-shadow: 9px 2px 9px 8px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 9px 2px 9px 8px rgba(0, 0, 0, 0.51);
+    padding: 15px;
+    /* Padding di dalam kontainer grafik */
 }
