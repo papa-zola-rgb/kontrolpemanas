@@ -1,46 +1,61 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Input Nilai</title>
-    <link rel="stylesheet" href="stylemain.css">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <title>Sistem Kendali Pemanas</title>
+    <link rel="stylesheet" href="css/stylemain.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
 </head>
+
 <body class="main">
-
-<div class="mode-container">  
-    <h2>Mode Sistem Kendali</h2>
-    <form>
-        <label for="mode">Pilih Mode:</label>
-        <select id="mode" name="mode" class="select-mode">
-            <option value="on">On/Off</option>
-            <option value="single">Satu Posisi</option>
-            <option value="dual">Dua Posisi</option>
-            <option value="pid">PID</option>
-        </select>
-    </form>
-</div>
-
-<div class="container-nilai">
-    <h2>Input Nilai</h2>
-    <form>
-        <label for="p">Nilai P:</label>
-        <input type="number" id="p" name="p" placeholder="Masukkan Nilai Proportional" required>
-        <label for="d">Nilai PD:</label>
-        <input type="number" id="d" name="d" placeholder="Masukkan Nilai Proportional & Derivative" required>
-        <label for="pid">Nilai PID:</label>
-        <input type="number" id="pid" name="pid" placeholder="Masukkan Nilai Proportional, Integral & Derivative" required>
-        <label for="sp">Nilai SP:</label>
-        <input type="number" id="sp" name="sp" placeholder="Masukkan Nilai Set Point" required>
-
-        <div class="button-kirim">
-            <button type="submit">Kirim</button>
+    <div class="mode-container">
+        <form>
+            <span class="atas">Choice Mode</span>
+            <label for="mode">Select Mode</label>
+            <select id="mode" name="mode" class="select-mode">
+                <option value="satuposisi">Satu Posisi</option>
+                <option value="duaposisi">Dua Posisi</option>
+                <option value="p">P</option>
+                <option value="pd">PD</option>
+                <option value="pid">PID</option>
+            </select>
+        </form>
+        <div class="timesampling">
+            <span class="atas">Running Time Setting</span>
+            <form>
+                <label for="samplingtime">Sampling Time (s)</label>
+                <input type="number" id="samplingtime" name="samplingtime" value=" " step="0,1" placeholder="Enter time you need" required>
+            </form>
         </div>
-    </form>
-</div>
+    </div>
 
-<a href="index.html" class="logout-button">Log Out</a>
+    <div id="input-fields"></div>
+
+    <div class="button-bawah">
+        <button id="start">Start</button>
+        <button id="stop">stop</button>
+        <button id="clear">Clear</button>
+    </div>
+    <div class="csv">
+        <button id="exportcsv" onclick="exportToCSV()">Export to CSV</button>
+    </div>
+    </div>
+
+    <div class="chart-container">
+        <canvas id="realTimeChart"></canvas>
+    </div>
+
+    <p class="caution">Peringatan!!!</p>
+    <p class="caution1"> Pastikan melakukan CLEAR data terlebih dahulu<br> sebelum memasukkan input data yang baru</p>
 
 
+    <a href="index.html" class="logout-button">Log Out</a>
+
+    <script src="javascripts/main.js"></script>
+    <!-- <script src="javascripts/chart.js"></script> -->
 </body>
+
 </html>
