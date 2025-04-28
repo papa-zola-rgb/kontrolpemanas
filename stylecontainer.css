@@ -1,157 +1,93 @@
-@import url('https://fonts.cdnfonts.com/css/poppins');
-
-body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Gill Sans;
+}
+
+body {
     display: flex;
-    height: 100vh;
-    background: linear-gradient(8deg, #bcd1f0, #165acf);
-    font-family: 'Poppins', sans-serif;
-    overflow: hidden;
+    justify-content: center;
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center items horizontally */
+    min-height: fit-content;
 }
 
-.caution {
-    text-align: center;
-    position: absolute;
-    right: 25%;
-    margin-top: 1%;
-    color: #f40a0a;
-    font-weight: bolder;
-    font-size: 25px;
-    text-decoration: underline;
-}
-
-.caution1 {
-    display: block;
-    position: absolute;
-    top: 6%;
-    right: 17%;
-    text-align: center;
-}
-
-.mode-container {
-    justify-content: space-between;
-    display: flex;
-    padding: 10px;
-    width: 40%;
+img {
+    width: 100%;
+    /* Make the image responsive */
+    max-width: 360px;
+    /* Limit the width to match the container */
+    height: auto;
     margin: 15px;
-    border-radius: 10px;
-    border-style: groove;
-    border-width: 5px;
-    position: absolute;
+}
+
+.container {
+    width: 320px;
+    height: 265px;
+    background: transparent;
+    color: #f9f6f6;
+    backdrop-filter: blur(10px);
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    /* Rounded corners */
+    margin-bottom: 170px;
+}
+
+.container h1 {
     text-align: center;
 }
-
-input,
-timpesampling {
-    width: 200px;
-    padding: 10px;
-    border: 1px solid #0f0f0f;
-    border-radius: 5px;
-    margin-bottom: 15px;
+.container_copyright {
+    text-align: center;
 }
-
-select {
-    width: 220px;
-    padding: 10px;
-    border: 1px solid #0f0f0f;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
 label {
-    font-weight: bold;
     display: block;
-}
-
-.input-group {
-    width: 200px;
-    padding: 20px;
-    margin-bottom: 0;
-    /* Jarak antar input */
-    position: relative;
-    top: 20%;
-    left: 3%;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 input,
-.input-group {
-    margin-bottom: 2px;
-}
-
-label,
-.input-group {
-    font-style: normal;
-}
-
-.button-bawah {
-    position: absolute;
-    bottom: 11%;
-    left: 5%;
-    border-style: hidden;
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
 }
 
 button {
-    background-color: rgb(11, 230, 48);
+    background-color: #27ac2b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
 }
 
 button:hover {
-    background-color: darkgreen;
+    background-color: #45a049;
 }
 
-.csv {
+footer {
+    color: #f9f6f6;
+    font-family: Gill Sans;
+    width: 99.7%;
+    padding-bottom: 5px;
+    position: fixed bottom;
+    text-align: center;
+}
+
+.vid_back {
     position: absolute;
-    bottom: 5%;
-    left: 4.5%;
-    border-style: double;
-}
-
-.logout-button {
-    background-color: #f44336;
-    /* Warna merah untuk tombol logout */
-    color: rgb(249, 246, 246);
-    padding: 10px;
-    /* Padding lebih kecil untuk tombol logout */
-    border: none;
-    border-radius: 25px;
-    text-decoration: none;
-    cursor: pointer;
-    width: auto;
-    position: absolute;
-    /* Posisi absolut untuk menempatkan di pojok kanan atas */
-    top: 8px;
-    right: 20px;
-    font-size: 14px;
-    /* Ukuran font lebih kecil */
-}
-
-.logout-button:hover {
-    background-color: #ccc;
-}
-
-canvas {
-    width: 100% !important;
-    /* Memastikan canvas memenuhi lebar kontainer */
-    height: 100% !important;
-    /* Tinggi otomatis untuk menjaga aspek rasio */
-}
-
-.chart-container {
-    position: fixed;
-    left: 260px;
-    bottom: 20px;
-    height: 400px;
-    /* Tinggi untuk kontainer grafik */
-    width: 970px;
-    margin-bottom: 0px;
-    /* Jarak antara grafik */
-    background: white;
-    /* Warna latar belakang untuk grafik */
-    border: #0f0f0f;
-    border-radius: 5px;
-    box-shadow: 9px 2px 9px 8px rgba(0, 0, 0, 0.51);
-    -webkit-box-shadow: 9px 2px 9px 8px rgba(0, 0, 0, 0.51);
-    -moz-box-shadow: 9px 2px 9px 8px rgba(0, 0, 0, 0.51);
-    padding: 15px;
-    /* Padding di dalam kontainer grafik */
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    /* Di belakang konten lainnya */
 }
